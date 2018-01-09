@@ -1,3 +1,20 @@
-<p>
-  animal-list works!
-</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Remove Contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let animal of animals">
+      <td>{{animal.type}}</td>
+      <td>{{animal.name}}</td>
+      <td *ngIf="!animal.age">Unknown</td>
+      <td *ngIf="animal.age">{{animal.age}}</td>
+      
+    </tr>
+
+  </tbody>
+</table>
