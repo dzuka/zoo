@@ -4,7 +4,7 @@
       <th>Type</th>
       <th>Name</th>
       <th>Age</th>
-      <th>Remove Contact</th>
+      <th>Remove Animal</th>
     </tr>
   </thead>
   <tbody>
@@ -13,7 +13,11 @@
       <td>{{animal.name}}</td>
       <td *ngIf="!animal.age">Unknown</td>
       <td *ngIf="animal.age">{{animal.age}}</td>
-      
+      <td>
+        <button (click)="removeAnimal(animal)">
+          Remove
+        </button>
+      </td>
     </tr>
 
   </tbody>
